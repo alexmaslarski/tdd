@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The dead division</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro:300,400,700|Kumar+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <header id="full-header">
+
+        <div class="resources">
+            <ul>
+                <li id="vaccine"><span>15 <img src="images/vakcine@2x.png" alt=""></span></li>
+
+                <li id="pills">1071 <img src="images/pills@2x.png" alt=""></li>
+
+                <li id="water">259 <img src="images/water@2x.png" alt=""></li>
+
+                <li id="electricity">7456 <img src="images/electricity@2x.png" alt=""></li>
+
+                <li id="thermal">12000 <img src="images/thermal@2x.png" alt=""></li>
+            </ul>
+        </div>
+        <div id="profileSection">
+            <div id="profileBadge">
+                <div id="level">
+                    <p>lvl 20</p>
+                </div>
+                <div id="profilepic">
+                    <img src="images/profilepic.png" alt="">
+                </div>
+
+            </div>
+            <div class="level-bar" id="level-profile-header">
+                <span style="width: 25%"></span>
+            </div>
+            <p class="hide" id="editProfileBtn">Edit Profile</p>
+        </div>
+    </header>
+
+    <main id="home"  >
+        <article id="featured" class="carousel js-flickity">
+            <div class="slider-card carousel-cell" id="welcome-card">
+                <h1>Welcome back survivor</h1>
+                <p><span>Che</span>ck what's new and manage your status</p>
+            </div>
+            <div class="slider-card carousel-cell" id="featured-card">
+                <h1>New Update</h1>
+                <p><span>Rea</span>d the patch notes</p>
+            </div>
+            <div class="slider-card carousel-cell" id="community-card">
+                <h1>Pro tips</h1>
+                <p><span>See</span> what the best player has to say</p>
+            </div>
+        </article>
+        <article id="card-wrapper" class="card-wrapper">
+            <section id="upgrade-card">
+                <h2>Upgrades</h2>
+                <div class="card-content">
+                    <div class="content-holder">
+                        <div class="upgrade">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Camp Wall</h3>
+                                <div class="level-bar">
+                                    <span id="timer1Progress"></span>
+                                </div>
+                                <p id="timer1">15h 36m left</p>
+                            </div>
+                        </div>
+                        <div class="upgrade">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Research Center</h3>
+                                <div class="level-bar">
+                                    <span id="timer2Progress"></span>
+                                </div>
+                                <p id="timer2">12h 06m left</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section id="achievements-card">
+                <h2>Achievements</h2>
+                <div class="card-content">
+
+
+                    <div class="content-holder">
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>The bigger they are</h3>
+                                <p>3h ago</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="see-more-button">
+                        <p><i class="fas fa-arrow-right"></i> See more</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="missions-card">
+                <h2>Missions</h2>
+                <div class="card-content">
+
+
+                    <div class="content-holder">
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Kill 20 zombies</p>
+                                <div class="level-bar">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Constructor</h3>
+                                <p>Build 10 buildings</p>
+                                <div class="level-bar">
+                                    <span style="width: 15%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Scientist</h3>
+                                <p>Research 2 new Formulas</p>
+                                <div class="level-bar">
+                                    <span style="width: 65%"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="see-more-button">
+                        <p><i class="fas fa-arrow-right"></i> See more</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="leaderboard-card">
+                <h2>Leaderboard</h2>
+                <div class="card-content">
+
+                    <div class="content-holder">
+                        <table>
+                            <tr>
+                                <th>Position</th>
+                                <th>Name</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Alexko</td>
+                                <td>2586</td>
+                            </tr>
+
+                            <tr>
+                                <td>15</td>
+                                <td>Adamko</td>
+                                <td>1059</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Kristianko</td>
+                                <td>1056</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Klavdia</td>
+                                <td>1047</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="see-more-button">
+                        <p><i class="fas fa-arrow-right"></i> See more</p>
+                    </div>
+                </div>
+            </section>
+
+
+        </article>
+    </main>
+    <main id="wiki" class="hide">
+        <article class="page-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <h1>Wiki</h1>
+            <p>Learn more about the game.</p>
+        </article>
+        <article class="content-wrapper">
+            <ul id="wiki-categories">
+                <li class="tab-header">
+                    <h2>Buildings</h2>
+                </li>
+                <li class="tab-content" id="wiki-items-click">
+                    <div class="wiki-element" data-link="https://api.myjson.com/bins/qce6y">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Wall</h3>
+                    </div>
+                    <div class="wiki-element" data-link="https://api.myjson.com/bins/1erdpm">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Town Hall</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Barracks</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Wall</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Town Hall</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Barracks</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Wall</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Town Hall</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Barracks</h3>
+                    </div>
+                    <div class="clearfix"></div>
+                <li class="tab-header">
+                    <h2>Enemies</h2>
+                </li>
+                <li class="tab-content">
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Drunk Zombie</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Spitter</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Zombie Dog</h3>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </li>
+                <li class="tab-header">
+                    <h2>Allies</h2>
+                </li>
+                <li class="tab-content">
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Sniper</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Mercenary</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Farmer</h3>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </li>
+                <li class="tab-header">
+                    <h2>Items</h2>
+                </li>
+                <li class="tab-content">
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Chainsaw</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>Flaregun</h3>
+                    </div>
+                    <div class="wiki-element">
+                        <img src="images/squareicon.jpg" alt="">
+                        <h3>AK-47</h3>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+        </article>
+    </main>
+    <main id="wiki-article" class="hide">
+        <article class="page-header" id="wiki-page-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <img id="wiki-header-image" src="images/communitybanner.jpg" alt="">
+            <h1 id="wiki-item-name">Wall</h1>
+
+        </article>
+        <article class="content-wrapper">
+            <p id="wiki-item-content1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque expedita eveniet, tempore aspernatur incidunt totam vitae voluptatibus omnis consequatur reprehenderit at doloremque quisquam, quidem alias sunt qui sed cumque porro magnam. Nam deleniti fugiat debitis impedit, vitae sunt repellendus, unde.</p>
+            <ul id="wiki-upgrade-levels">
+                <li class="tab-header">
+                    <h3>Upgrades</h3>
+                </li>
+                <li class="tab-content" id="tab-content">
+
+                </li>
+            </ul>
+            <p id="wiki-item-content2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque expedita eveniet, tempore aspernatur incidunt totam vitae voluptatibus omnis consequatur reprehenderit at doloremque quisquam, quidem alias sunt qui sed cumque porro magnam. Nam deleniti fugiat debitis impedit, vitae sunt repellendus, unde.</p>
+        </article>
+    </main>
+    <main id="leaderboards" class="hide">
+        <article class="page-header" id="leaderboard-page-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <h1>Leaderboards</h1>
+            <div id="leaderboard-tabs">
+                <div class="column" id="players-tab">
+                    <h3>Players</h3>
+                </div>
+                <div class="column" id="teams-tab">
+                    <h3>Teams</h3>
+                </div>
+            </div>
+
+        </article>
+        <article class="content-wrapper">
+            <form class="searchBar" action="">
+                <input type="text" name="search" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="leaderboard-table" id="players-leaderboards">
+                <table>
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>XP</th>
+                        <th>LVL</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Alexko</td>
+                        <td>2586</td>
+                        <td>46</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Adamko</td>
+                        <td>2566</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Kristianko</td>
+                        <td>2516</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>Klavdi</td>
+                        <td>2490</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>Pica</td>
+                        <td>2400</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Falafel</td>
+                        <td>2390</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Gypsy_King</td>
+                        <td>2380</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>hehe</td>
+                        <td>2350</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>Minja</td>
+                        <td>2315</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>Sadam</td>
+                        <td>2300</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>Falafel</td>
+                        <td>2390</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>Gypsy_King</td>
+                        <td>2380</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>hehe</td>
+                        <td>2350</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>Minja</td>
+                        <td>2315</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>15.</td>
+                        <td>Sadam</td>
+                        <td>2300</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>16.</td>
+                        <td>Falafel</td>
+                        <td>2390</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td>17.</td>
+                        <td>Gypsy_King</td>
+                        <td>2380</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>18.</td>
+                        <td>hehe</td>
+                        <td>2350</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>19.</td>
+                        <td>Minja</td>
+                        <td>2315</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>20.</td>
+                        <td>Sadam</td>
+                        <td>2300</td>
+                        <td>42</td>
+                    </tr>
+                </table>
+                <ul class="pages">
+                    <li id="previous-page"> <i class="fas fa-arrow-left"></i> </li>
+                    <li> 1 </li>
+                    <li id="next-page"> <i class="fas fa-arrow-right"></i> </li>
+                </ul>
+            </div>
+            <div class="leaderboard-table hide" id="teams-leaderboards">
+                <table>
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Members</th>
+                        <th>XP</th>
+                    </tr>
+                    <tr>
+                        <td>1.</td>
+                        <td>Mangos</td>
+                        <td>30/30</td>
+                        <td>25086</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>Narcos</td>
+                        <td>30/30</td>
+                        <td>25066</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>Picozavuri</td>
+                        <td>30/30</td>
+                        <td>25016</td>
+                    </tr>
+                    <tr>
+                        <td>4.</td>
+                        <td>RIL SLAVS</td>
+                        <td>30/30</td>
+                        <td>24090</td>
+                    </tr>
+                    <tr>
+                        <td>5.</td>
+                        <td>FAKE SLAVS</td>
+                        <td>30/30</td>
+                        <td>24000</td>
+                    </tr>
+                    <tr>
+                        <td>6.</td>
+                        <td>Mangos</td>
+                        <td>30/30</td>
+                        <td>25086</td>
+                    </tr>
+                    <tr>
+                        <td>7.</td>
+                        <td>Narcos</td>
+                        <td>30/30</td>
+                        <td>25066</td>
+                    </tr>
+                    <tr>
+                        <td>8.</td>
+                        <td>Picozavuri</td>
+                        <td>30/30</td>
+                        <td>25016</td>
+                    </tr>
+                    <tr>
+                        <td>9.</td>
+                        <td>RIL SLAVS</td>
+                        <td>30/30</td>
+                        <td>24090</td>
+                    </tr>
+                    <tr>
+                        <td>10.</td>
+                        <td>FAKE SLAVS</td>
+                        <td>30/30</td>
+                        <td>24000</td>
+                    </tr>
+                    <tr>
+                        <td>11.</td>
+                        <td>Mangos</td>
+                        <td>30/30</td>
+                        <td>25086</td>
+                    </tr>
+                    <tr>
+                        <td>12.</td>
+                        <td>Narcos</td>
+                        <td>30/30</td>
+                        <td>25066</td>
+                    </tr>
+                    <tr>
+                        <td>13.</td>
+                        <td>Picozavuri</td>
+                        <td>30/30</td>
+                        <td>25016</td>
+                    </tr>
+                    <tr>
+                        <td>14.</td>
+                        <td>RIL SLAVS</td>
+                        <td>30/30</td>
+                        <td>24090</td>
+                    </tr>
+                    <tr>
+                        <td>15.</td>
+                        <td>FAKE SLAVS</td>
+                        <td>30/30</td>
+                        <td>24000</td>
+                    </tr>
+                    <tr>
+                        <td>16.</td>
+                        <td>Mangos</td>
+                        <td>30/30</td>
+                        <td>25086</td>
+                    </tr>
+                    <tr>
+                        <td>17.</td>
+                        <td>Narcos</td>
+                        <td>30/30</td>
+                        <td>25066</td>
+                    </tr>
+                    <tr>
+                        <td>18.</td>
+                        <td>Picozavuri</td>
+                        <td>30/30</td>
+                        <td>25016</td>
+                    </tr>
+                    <tr>
+                        <td>19.</td>
+                        <td>RIL SLAVS</td>
+                        <td>30/30</td>
+                        <td>24090</td>
+                    </tr>
+                    <tr>
+                        <td>20.</td>
+                        <td>FAKE SLAVS</td>
+                        <td>30/30</td>
+                        <td>24000</td>
+                    </tr>
+
+                </table>
+                <ul class="pages">
+                    <li id="previous-page"> <i class="fas fa-arrow-left"></i> </li>
+                    <li> 1 </li>
+                    <li id="next-page"> <i class="fas fa-arrow-right"></i> </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+    <main id="profile" class="hide">
+        <article class="page-header">
+            <div id="profile-page-header">
+                <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+                <div class="profile-column">
+                    <p>Position</p>
+                    <h2>16</h2>
+                </div>
+                <div id="profile-picture-column" class="profile-column">
+                    <img src="images/profilepic.png" alt="">
+
+                </div>
+                <div id="level-column" class="profile-column">
+                    <h2>Level 20</h2>
+                    <div class="level-bar">
+                        <span style="width: 25%"></span>
+                    </div>
+                    <p>5 000 / 20 000</p>
+                </div>
+            </div>
+            <div id="profile-page-name">
+                <h2>Baron Dolko</h2>
+                <p>Cool team name</p>
+            </div>
+
+        </article>
+        <article class="card-wrapper">
+            <section id="friends-card">
+                <h2>Friends</h2>
+                <div class="card-content">
+                    <table class="team-table">
+                        <tr>
+                            <th></th>
+                            <th>Clan</th>
+                            <th>Name</th>
+                            <th>Level</th>
+                        </tr>
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                            <td>KurZaLitex</td>
+                            <td>Alex</td>
+                            <td>46</td>
+                        </tr>
+
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle offline"></i></td>
+                            <td>Slovakia</td>
+                            <td>Adamko</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle offline"></i></td>
+                            <td>Slovakia</td>
+                            <td>Kristian</td>
+                            <td>46</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                            <td>nzbrat</td>
+                            <td>Klaudia</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                            <td>KurZaLitex</td>
+                            <td>Alex</td>
+                            <td>46</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                            <td>KurZaLitex</td>
+                            <td>Alex</td>
+                            <td>46</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </article>
+
+    </main>
+    <main id="achievements-page" class="hide">
+        <article class="page-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <h1>Achievements</h1>
+            <p>See your latest Achievements</p>
+        </article>
+        <article class="card-wrapper">
+            <section id="achievements-card">
+
+                <div class="card-content">
+
+
+                    <div class="content-holder">
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="achievement-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <p>5d 3h ago</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <main id="missions-page" class="hide">
+        <article class="page-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <h1>Missions</h1>
+            <p>See your Active Missions</p>
+        </article>
+        <article class="card-wrapper">
+            <section id="missions-card">
+                <h2>Main Missions</h2>
+                <div class="card-content">
+
+
+                    <div class="content-holder">
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Kill 20 zombies</p>
+                                <div class="level-bar">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Constructor</h3>
+                                <p>Build 10 buildings</p>
+                                <div class="level-bar">
+                                    <span style="width: 15%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Scientist</h3>
+                                <p>Research 2 new Formulas</p>
+                                <div class="level-bar">
+                                    <span style="width: 65%"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <section id="missions-card">
+                <h2>Side Missions</h2>
+                <div class="card-content">
+
+
+                    <div class="content-holder">
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Zombie Anihilator</h3>
+                                <p>Kill 20 zombies</p>
+                                <div class="level-bar">
+                                    <span style="width: 90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Constructor</h3>
+                                <p>Build 10 buildings</p>
+                                <div class="level-bar">
+                                    <span style="width: 15%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mission">
+                            <img src="images/squareicon.jpg" alt="">
+                            <div class="mission-card-info">
+                                <h3>Scientist</h3>
+                                <p>Research 2 new Formulas</p>
+                                <div class="level-bar">
+                                    <span style="width: 65%"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <main id="team-page"  class="hide">
+       
+        <article class="page-header">
+            <div id="profile-page-header">
+                <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+                <div class="profile-column">
+                    <p>Position</p>
+                    <h2>1</h2>
+                </div>
+                <div id="profile-picture-column" class="profile-column">
+                    <img src="images/profilepic.png" alt="">
+
+                </div>
+                <div id="level-column" class="profile-column">
+                    <h2>Rank 20</h2>
+                    <div class="level-bar">
+                        <span style="width: 83.62%"></span>
+                    </div>
+                    <p>25 086 / 30 000</p>
+                </div>
+            </div>
+            <div id="profile-page-name">
+                <h2>Mangos</h2>
+                <p>We are the Best Team</p>
+            </div>
+
+        </article>
+        
+        <article class="card-wrapper">
+           <section id="team-resources">
+                  
+                   <div class="resources">
+                    <ul>
+                       
+
+                        <li id="team-pills">10071 <img src="images/pills@2x.png" alt=""></li>
+
+                        <li id="team-water">2595 <img src="images/water@2x.png" alt=""></li>
+
+                        <li id="team-electricity">7456 <img src="images/electricity@2x.png" alt=""></li>
+
+                        <li id="team-thermal">12000 <img src="images/thermal@2x.png" alt=""></li>
+                    </ul>
+                </div></section>
+            <section id="donate-resources">
+               
+                <div class="resources" id="donation">
+                    <ul>
+                       
+
+                        <li> <img src="images/pills@2x.png" alt="">
+                        <input type="number" name="pillsInput" value=0></li>
+
+                        <li><img src="images/water@2x.png" alt=""> <input type="number" name="waterInput" value=0> </li>
+
+                        <li><img src="images/electricity@2x.png" alt=""> <input type="number" name="electricityInput" value=0> </li>
+
+                        <li> <img src="images/thermal@2x.png" alt=""><input type="number" name="thermalInput" value=0> </li>
+                    </ul>
+                </div>
+                
+                <div id="donateBtn">
+                    <p id="donateBtnText">DONATE RESOURCES</p>
+                    
+                </div>
+                 <div id="insufficient">Not Enough Resources</div>
+                 <div id="donated">Donated!</div>
+            </section>
+
+            <section id="team-players-card">
+                <h2>Team Players</h2>
+                <div class="card-content">
+                    <table class="team-table">
+                        <tr>
+                            <th></th>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Level</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Leader</td>
+                                <td>Alex</td>
+                                <td>46</td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle offline"></i></td>
+                                <td>Co-leader</td>
+                                <td>Adamko</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle offline"></i></td>
+                                <td>Sergeant</td>
+                                <td>Kristian</td>
+                                <td>46</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Specialist</td>
+                                <td>Klaudia</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+
+
+
+
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                        </tbody>
+
+
+                        <tbody class="hide" id="more-team">
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Razvan</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Simeon</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/profilepic.png" alt=""><i class="fas fa-circle active"></i></td>
+                                <td>Private</td>
+                                <td>Jarko</td>
+                                <td>35</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="team-players-see-more" class="see-more-button">
+                        <p><i class="fas fa-arrow-right"></i> See more</p>
+                    </div>
+
+
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <main id="chat" class="hide">
+       
+      
+        <form class="chat">
+      <div class="message-header">
+          <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+          <img src="images/profilepic.png" alt="">
+          <h2>Alex</h2>
+          
+      </div>
+      <div class="messages" id="adobewordpress">
+        <div class="message">
+          <div class="myMessage">
+            <p>Send me some Energy, I'm a peasant..</p>
+            <date><b>Baron Adam</b> 22.05.2019 14:30:7</date>
+          </div>
+        </div>
+        <div class="message">
+          <div class="fromThem">
+            <p>How much do you want?</p>
+            <date><b>Alex</b> 22.05.2019 14:31:22</date>
+          </div>
+        </div>
+        <div class="message">
+          <div class="myMessage">
+            <p>Idk, like 1000?</p>
+            <date><b>Baron Adam</b> 22.05.2019 14:33:32</date>
+          </div>
+        </div>
+        <div class="message">
+          <div class="myMessage">
+            <p>I can send you some Pills in exchange?</p>
+            <date><b>Baron Adam</b> 22.05.2019 14:36:4</date>
+          </div>
+        </div>
+        <div class="message">
+          <div class="myMessage">
+            <p>pls respond</p>
+            <date><b>Baron Adam</b> 22.05.2019 14:46:4</date>
+          </div>
+        </div>
+        <div class="message">
+          <div class="fromThem">
+            <p>Okay okay don't worry</p>
+            <date><b>Alex</b> 22.05.2016 14:47:12</date>
+          </div>
+        </div>
+      </div>
+      <div class="message-footer">
+          <input type="text" placeholder="Your message">
+      <input type="submit" value="Send">
+      </div>
+      
+    </form>
+    </main>
+    <main id="chat-list" class="hide">
+        <div class="chat-list-header">
+            <div class="go-back"><i class="fas fa-arrow-left"></i> Back</div>
+            <form class="searchBar" action="">
+                <input type="text" name="search" placeholder="Search">
+                <button><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="chat-list-wrapper">
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Mangos</h2>
+                    <p>Send me enegry pls</p>
+                </div>
+                <p class="chat-item-time">18:55</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Alex</h2>
+                    <p>OK</p>
+                </div>
+                <p class="chat-item-time">18:12</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>KUbisMaster</h2>
+                    <p>You r ded</p>
+                </div>
+                <p class="chat-item-time">13:12</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Razvan</h2>
+                    <p>Traitor</p>
+                </div>
+                <p class="chat-item-time">12:55</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Klavdi</h2>
+                    <p>Nz Brat</p>
+                </div>
+                <p class="chat-item-time">12:45</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Fendi</h2>
+                    <p>Gucci</p>
+                </div>
+                <p class="chat-item-time">10:55</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Gucci</h2>
+                    <p>Fendi</p>
+                </div>
+                <p class="chat-item-time">10:26</p>
+            </div>
+            <div class="chat-list-item">
+                <img src="images/profilepic.png" alt="">
+                <div class="chat-item-content">
+                    <h2>Google</h2>
+                    <p>BB Huawei</p>
+                </div>
+                <p class="chat-item-time">09:55</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li id="overviewBtn"><img src="images/overviewicon2.jpg" alt="">
+                <p>Overview</p>
+                </p>
+            </li>
+            <li id="wikiBtn"><img src="images/wikiicon.jpg" alt="">
+                <p>Wiki</p>
+                </p>
+            </li>
+            <li id="missionsBtn"><img src="images/missionsicon.jpg" alt="">
+                <p>Missions</p>
+                </p>
+            </li>
+            <li id="teamBtn"><img src="images/teamicon.jpg" alt="">
+                <p>Team</p>
+                </p>
+            </li>
+            <li id="chatBtn"><img src="images/chaticon.jpg" alt="">
+                <p>Chat</p>
+                </p>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
