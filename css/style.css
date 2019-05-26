@@ -87,6 +87,12 @@ header {
     padding: 0 5px;
 }
 
+header .resources ul li {
+    margin: 0px 1px;
+    background-color: rgba(64, 64, 64, 0.41);
+    border-radius: 50px;
+}
+
 .resources ul li span {
     font-size: 1.5em;
     color: orange;
@@ -380,6 +386,16 @@ th {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+#leaderboard-card table tr:nth-child(2) {
+    border-bottom: 3px solid #b5ad06;
+}
+
+#leaderboard-card table tr:nth-child(4) {
+    color: #b5ad06;
+    font-weight: bold;
+}
+
+
 
 
 /*Footer*/
@@ -402,6 +418,10 @@ footer ul {
     text-align: center;
 }
 
+footer ul li {
+    width: 60px;
+}
+
 footer ul li img {
     width: 25px;
     height: 25px;
@@ -422,6 +442,10 @@ footer ul li img {
     position: relative;
     color: white;
     text-align: center;
+}
+
+#profile .page-header {
+    background: url(../images/featuredbanner.jpg);
 }
 
 .page-header h1 {
@@ -476,6 +500,12 @@ footer ul li img {
     text-align: center;
     margin-bottom: 20px;
     color: white;
+}
+
+.wiki-element img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
 }
 
 .wiki-element h3 {
@@ -537,6 +567,26 @@ footer ul li img {
 
 #leaderboard-tabs {
     display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#leaderboard-tabs .column {
+    height: 30px;
+    line-height: 30px;
+}
+
+#leaderboard-tabs .column h2 {
+    font-size: 1em;
+    
+}
+.active-tab{
+    background-color: white;
+    border-radius: 5px;
+}
+.active-tab h2{
+    color: #3a3a3a;
 }
 
 .column {
@@ -544,6 +594,7 @@ footer ul li img {
     text-align: center;
 }
 
+/*
 #players-tab {
     border-right: 1px solid white;
 }
@@ -551,6 +602,7 @@ footer ul li img {
 #teams-tab {
     border-left: 1px solid white;
 }
+*/
 
 #leaderboards table {
     width: 100%;
@@ -1054,12 +1106,15 @@ form.chat .fromThem {
     background: linear-gradient(180deg, rgba(142, 18, 18, 1) 0%, rgba(69, 11, 11, 1) 100%);
     position: relative;
 }
-.chat-list-header .go-back{
+
+.chat-list-header .go-back {
     top: 13px;
 }
-.chat-list-header .searchBar{
+
+.chat-list-header .searchBar {
     padding-left: 60px;
 }
+
 .chat-list-item {
     display: flex;
     color: white;
@@ -1075,20 +1130,25 @@ form.chat .fromThem {
     height: 50px;
     border-radius: 50px;
 }
-.chat-item-time{
+
+.chat-item-time {
     line-height: 50px;
 }
-.chat-item-content h2{
+
+.chat-item-content h2 {
     font-size: 1.2em;
 }
-.chat-list-item:first-of-type h2{
+
+.chat-list-item:first-of-type h2 {
     color: gold;
 }
-.chat-list-item:first-of-type{
-   
+
+.chat-list-item:first-of-type {
+
     border-bottom-width: 10px;
 }
-.chat-item-content{
+
+.chat-item-content {
     width: 100%;
     padding-left: 10%;
 }

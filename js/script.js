@@ -30,14 +30,18 @@ $(document).ready(function () {
         $('#players-leaderboards').fadeIn(speed)
             .siblings('.leaderboard-table')
             .fadeOut();
+        $('#players-tab').addClass("active-tab");
+        $('#teams-tab').removeClass("active-tab");
     });
     $('#teams-tab').on(action, function () {
         $('#teams-leaderboards').fadeIn(speed)
             .siblings('.leaderboard-table')
             .fadeOut();
+        $('#players-tab').removeClass("active-tab");
+        $('#teams-tab').addClass("active-tab");
     });
 
-    $('#searchBar').on("submit", function (e) {
+    $('.searchBar').on("submit", function (e) {
         e.preventDefault();
     });
 
@@ -221,8 +225,8 @@ $(document).ready(function () {
 });
 
 /*Upgrade timers*/
-var countDownDate1 = new Date("May 22, 2019 14:07:00").getTime();
-var countDownDate2 = new Date("May 22, 2019 11:37:25").getTime();
+var countDownDate1 = new Date("May 24, 2019 14:07:00").getTime();
+var countDownDate2 = new Date("May 24, 2019 11:37:25").getTime();
 var upgradeTime = 86400000;
 var timeLeft1;
 var timeLeft2;
