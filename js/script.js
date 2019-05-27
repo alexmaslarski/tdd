@@ -1,10 +1,10 @@
 $('#featured').flickity({
     // options
-    cellAlign: 'left',
-    contain: true,
-    prevNextButtons: false,
-    pageDots: true,
-    autoPlay: 7000
+    cellAlign: 'left', // align cells left
+    contain: true, // contain image
+    prevNextButtons: false, // hide prev and next buttons
+    pageDots: true, // display page dots
+    autoPlay: 7000 // autoplay every 7 seconds
 });
 
 $(document).ready(function () {
@@ -21,6 +21,8 @@ $(document).ready(function () {
 
     });
 
+    
+    
     $('#team-players-card').on(action, function () {
         $('#more-team').toggle();
         $('#team-players-see-more').toggle();
@@ -46,49 +48,48 @@ $(document).ready(function () {
     });
 
     /*Tabs End*/
+    
+    
+    
     /*Navigation start*/
+    
+    
+    /*Go back button start*/
     var currentPage = "home";
     var previousPage;
 
-    function goBack(backPage) {
-        var link = "#" + backPage;
-
-        $(link).show().siblings('main').hide();
-        if (backPage == "profile") {
-            $('#profile-header').show().siblings('header').hide();
-        } else {
-            $('#full-header').show().siblings('header').hide();
-        }
-
-        window.scroll(0, 0);
-
-        currentPage = previousPage;
-        previousPage = "home";
-
+    function goBack(backPage) { // function with a parameter passing the id of the previous page
+        var link = "#" + backPage; // construncting the link by addind a Hash to the id passed through by the parameter
+        $(link).show().siblings('main').hide(); // Show the <main> with the specific link as id
+        window.scroll(0, 0);// scroll to top
+        currentPage = previousPage;  // previous page takes the value of the current one (which is technically the last page)
+        previousPage = "home";// the current page is changed to the home page 
     };
 
-    $(".go-back").click(function () {
-
-        if (previousPage === "profile") {
+    $(".go-back").click(function () { //onclick of the button it triggers a fucntion
+        if (previousPage === "profile") { // if the previous page is the profile page, it changes the header and then executes the goBack function with the id as a parameter.
             $('#full-header').addClass("profile-header");
             goBack(previousPage);
-        } else {
+        } else { // else it removes the class and executes the function
             goBack(previousPage);
             $('#full-header').removeClass("profile-header");
-            console.log(previousPage);
+            
         }
-        
     });
 
+    /*Go back Button end*/
+    
+    
+    
 
     $('#homeBtn').click(function () {
-        $('#home').show().siblings('main').hide();
-        $('#full-header').removeClass("profile-header");
-        window.scroll(0, 0);
-
-        previousPage = currentPage;
-        currentPage = "home";
+        $('#home').show().siblings('main').hide(); // show #home and hide all other elements from the 'main' tag
+        $('#full-header').removeClass("profile-header"); // Incase the .profile-header class was added to the header, this removes it.
+        window.scroll(0, 0); // scrolls to the top of the page, so when you go on another page you are always on the top.
+        previousPage = currentPage; // previous page takes the value of the current one (which is technically the last page)
+        currentPage = "home"; // the current page is changed to the currently active page
     });
+    
     $('#overviewBtn').click(function () {
         $('#home').show().siblings('main').hide();
         $('#full-header').removeClass("profile-header");
@@ -102,8 +103,6 @@ $(document).ready(function () {
         window.scroll(0, 0);
         previousPage = currentPage;
         currentPage = "wiki";
-        console.log(previousPage);
-        console.log(currentPage);
     });
     $('#leaderboard-card').click(function () {
         $('#leaderboards').show().siblings('main').hide();
@@ -190,31 +189,28 @@ $(document).ready(function () {
     function showData(jsonData) {
 
         jsonElements = JSON.parse(jsonData.responseText); //Parsing the object
-        console.log(jsonElements);
 
         $('#wiki-article').show().siblings('main').hide();
         $('#wiki-header-image').attr("src", jsonElements.image);
         $('#wiki-item-name').text(jsonElements.name);
         $('#wiki-item-content1').text(jsonElements.description1);
         $('#wiki-item-content2').text(jsonElements.description2);
-
+        $('#wiki-dropdown').text(jsonElements.dropdown);
         $('#tab-content').empty();
         for (var i = 0; i < jsonElements.upgrades.length; i++) {
             console.log(i);
-            $('#tab-content').append('<div class="wiki-upgrade-card"><img src="' + jsonElements.upgrades[i].image + '" alt=""><div class="wiki-upgrade-card-content"><h3>' + jsonElements.upgrades[i].level + '</h3><p>' + jsonElements.upgrades[i].resources + '</p></div></div>');
+            $('#tab-content').append('<div class="wiki-upgrade-card"><img src="' + jsonElements.upgrades[i].image + '" alt=""><div class="wiki-upgrade-card-content"><h3>' + jsonElements.upgrades[i].level + '</h3><p>' + jsonElements.upgrades[i].description + '</p><p class="wiki-resources">' + jsonElements.upgrades[i].resources + '</p></div></div>');
         }
 
     }
 
-    $("#wiki-items-click").on("click", "div", function () {
+    $(".wiki-items-click").on("click", "div", function () {
         var itemClickedLink = $(this).attr("data-link");
         collectData(itemClickedLink, showData);
         if (itemClickedLink !== undefined) {
             $('#wiki-article').show().siblings('main').hide();
             previousPage = currentPage;
             currentPage = "wiki-article";
-            console.log(previousPage);
-            console.log(currentPage);
         }
     });
 
@@ -225,49 +221,43 @@ $(document).ready(function () {
 });
 
 /*Upgrade timers*/
-var countDownDate1 = new Date("May 24, 2019 14:07:00").getTime();
-var countDownDate2 = new Date("May 24, 2019 11:37:25").getTime();
-var upgradeTime = 86400000;
-var timeLeft1;
+var countDownDate1 = new Date("May 26, 2019 19:07:00").getTime(); // Set upgrade timers time and date, preferably under 24h
+var countDownDate2 = new Date("May 26, 2019 21:37:25").getTime();
+var upgradeTime = 86400000; // Set upgrade duration (1 day)
+var timeLeft1;// variable for storing time left percentage
 var timeLeft2;
-var x = setInterval(function () {
+var x = setInterval(function () { // setinterval function which updates every 1 second
 
     // Get today's date and time
     var now = new Date().getTime();
     // Find the distance between now and the count down date
     var distance1 = countDownDate1 - now;
+    //calculating percentage left to completing the upgrade
     timeLeft1 = 100 - (100 * (distance1 / upgradeTime));
-
     var distance2 = countDownDate2 - now;
     timeLeft2 = 100 - (100 * (distance2 / upgradeTime));
-
+    //updating progress bar
     if (distance1 >= 0) {
         $('#timer1Progress').css("width", timeLeft1 + "%");
     }
     if (distance2 >= 0) {
         $('#timer2Progress').css("width", timeLeft2 + "%");
     }
-
-
-
     // Time calculations for days, hours, minutes and seconds
     var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
     var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
     var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
-
     var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
     var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
     var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
-
-    // Display the result in the element with id="demo"
+    // Display the result in the elements
     document.getElementById("timer1").innerHTML = hours1 + "h " +
         minutes1 + "m " + seconds1 + "s ";
     document.getElementById("timer2").innerHTML = hours2 + "h " +
         minutes2 + "m " + seconds2 + "s ";
-
-    // If the count down is finished, write some text 
+    // If the count down is finished, say its upgraded
     if (distance1 < 0) {
         $('#timer1Progress').css("width", "100%");
         document.getElementById("timer1").innerHTML = "Upgraded";
@@ -281,6 +271,7 @@ var x = setInterval(function () {
 /*Upgrade Timers end*/
 
 /*Donation*/
+//Fetch text from resource elements, turn it into a number and assign it to a variable
 var pills = parseInt($('#pills').text(), 10);
 var water = parseInt($('#water').text(), 10);
 var electricity = parseInt($('#electricity').text(), 10);
@@ -289,33 +280,31 @@ var teamPills = parseInt($('#team-pills').text(), 10);
 var teamWater = parseInt($('#team-water').text(), 10);
 var teamElectricity = parseInt($('#team-electricity').text(), 10);
 var teamThermal = parseInt($('#team-thermal').text(), 10);
-
-
-$("#donateBtn").click(donate);
-
+$("#donateBtn").click(donate); //On click it triggers the donate function
 function donate() {
+    //Fetches the value entered by the user inside the input element for each resource and assign it to a variable
     var pillsInput = parseInt($("input[type=number][name=pillsInput]").val());
     var waterInput = parseInt($("input[type=number][name=waterInput]").val());
     var electricityInput = parseInt($("input[type=number][name=electricityInput]").val());
     var thermalInput = parseInt($("input[type=number][name=thermalInput]").val());
-
-
+    // Variable containing the the result of substracting the inputed value from the available resources, in order to check if the user has enough resources
     var pillsCheck = pills - pillsInput;
     var waterCheck = water - waterInput;
     var electricityCheck = electricity - electricityInput;
     var thermalCheck = thermal - thermalInput;
-
-
+    //Check if difference between input and available resources is not a negative number
     if (pillsCheck >= 0 && waterCheck >= 0 && electricityCheck >= 0 && thermalCheck >= 0) {
-        teamPills = teamPills + pillsInput;
-        pills -= pillsInput;
+        //increasing the team resources with the input value using the Addition Assignment operator
+        teamPills += pillsInput;
         teamWater += waterInput;
-        water -= waterInput;
         teamElectricity += electricityInput;
-        electricity -= electricityInput;
         teamThermal += thermalInput;
+        //Decreasing the user resources with the input value using the Substraction Assignment operator
+        pills -= pillsInput;
+        water -= waterInput;
+        electricity -= electricityInput;
         thermal -= thermalInput;
-
+        //Updating the resource values in the DOM
         $('#pills').html(pills + " <img src='images/pills@2x.png' alt=''>");
         $('#team-pills').html(teamPills + " <img src='images/pills@2x.png' alt=''>");
         $('#water').html(water + " <img src='images/water@2x.png' alt=''>");
@@ -324,12 +313,10 @@ function donate() {
         $('#team-electricity').html(teamElectricity + " <img src='images/electricity@2x.png' alt=''>");
         $('#thermal').html(thermal + " <img src='images/thermal@2x.png' alt=''>");
         $('#team-thermal').html(teamThermal + " <img src='images/thermal@2x.png' alt=''>");
-        console.log("worked");
-
+        //Showing an animated dropdown message, showing the user that the donation was successful
         $('#donated').slideDown(300).delay(3000).slideUp(300);
-
     } else {
-
+        //Showing an animated dropdown message, showing the user that the donation was not successful
         $('#insufficient').slideDown(300).delay(3000).slideUp(300);
     }
 
@@ -339,33 +326,43 @@ function donate() {
 
 
 /*CHAT*/
+// Makes sure the chat is always scrolled to the bottom
 function scrollDown() {
   var focusBottom = document.getElementById("adobewordpress");
   focusBottom.scrollTop = focusBottom.scrollHeight;
 }
-
+//Checks if the key pressed is enter in order to send the message
 $("input").keypress(function(event) {
   if (event.which == 13) {
     event.preventDefault();
     $('form.chat input[type="submit"]').click();
   }
 });
+
+//Submitting the message
 $('form.chat input[type="submit"]').click(function(event) {
   event.preventDefault();
+    //assign the value of the input to a message variable
   var message = $('form.chat input[type="text"]').val();
+    //checks if the message is not empty, and gets the current time its being sent
   if ($('form.chat input[type="text"]').val()) {
     var d = new Date();
     var clock = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     var month = d.getMonth() + 1;
     var day = d.getDate();
+      //assigns the current date to a variable
     var currentDate =
       (('' + day).length < 2 ? '0' : '') + day + '.' +
       (('' + month).length < 2 ? '0' : '') + month + '.' +
       d.getFullYear() + '&nbsp;&nbsp;' + clock;
+      
+      //displays the date over the message
     $('form.chat div.messages').append('<div class="message"><div class="myMessage"><p>' + message + '</p><date><b>Baron Adam </b>' + currentDate + '</date></div></div>');
     
   }
+    //clears the input field
   $('form.chat input[type="text"]').val('');
+    //scrolls down to see the last message
   scrollDown();
 });
 

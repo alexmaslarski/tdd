@@ -1,0 +1,18 @@
+{
+    "name": "Chainsaw",
+    "id": "chainsaw",
+    "image": "images/chainsawbackground.jpg",
+    "description1": "This item can be crafted in the Forge, and has multiple uses. It can be assigned to soldiers, villagers and farmers and it can either boost their attack damage or their resources mining speed. ",
+    "description2": "",
+    "dropdown": "Strong against",
+    "upgrades": [
+        {
+            "level": "spitters",
+            "image": "images/spitter.jpg",
+            "resources": "",
+            "description": "Spitters don't like chainsaws"
+        }
+        
+    ]
+
+}
