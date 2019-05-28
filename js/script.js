@@ -221,8 +221,8 @@ $(document).ready(function () {
 });
 
 /*Upgrade timers*/
-var countDownDate1 = new Date("May 26, 2019 19:07:00").getTime(); // Set upgrade timers time and date, preferably under 24h
-var countDownDate2 = new Date("May 26, 2019 21:37:25").getTime();
+var countDownDate1 = new Date("May 28, 2019 19:07:00").getTime(); // Set upgrade timers time and date, preferably under 24h
+var countDownDate2 = new Date("May 29, 2019 10:37:25").getTime();
 var upgradeTime = 86400000; // Set upgrade duration (1 day)
 var timeLeft1;// variable for storing time left percentage
 var timeLeft2;

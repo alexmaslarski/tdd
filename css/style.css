@@ -391,9 +391,12 @@ th {
 }
 
 #leaderboard-card table tr:nth-child(4) {
-    color: #b5ad06;
+    color: #ffffff;
     font-weight: bold;
+    background-color: rgba(30, 117, 0, 0.6);
 }
+
+
 
 
 
@@ -526,11 +529,16 @@ footer ul li img {
 }
 
 #wiki-upgrade-levels .tab-header {
-    background: linear-gradient(270deg, rgba(24, 2, 2, 0.5) 0%, rgb(0, 0, 0) 100%);
+    background: linear-gradient(270deg, rgba(80, 0, 0, 0.5) 0%, rgba(239, 0, 0, 0.5) 100%);
     font-size: 1.5em;
     padding: 5px 10px;
     color: white;
-        border: 1px solid gold;
+    border: 1px solid gold;
+}
+
+#wiki-categories .tab-header {
+    background: linear-gradient(270deg, rgba(80, 0, 0, 0.5) 0%, rgba(239, 0, 0, 0.5) 100%);
+    padding-bottom: 4px;
 }
 
 .wiki-upgrade-card {
@@ -561,7 +569,8 @@ footer ul li img {
     height: 100%;
     line-height: 120px;
 }
-.wiki-resources{
+
+.wiki-resources {
     color: gold;
     font-size: 0.8em;
 }
@@ -584,19 +593,48 @@ footer ul li img {
 
 #leaderboard-tabs .column h2 {
     font-size: 1em;
-    
+
 }
-.active-tab{
+
+.active-tab {
     background-color: white;
     border-radius: 5px;
 }
-.active-tab h2{
+
+.active-tab h2 {
     color: #3a3a3a;
 }
 
 .column {
     width: 50%;
     text-align: center;
+}
+#leaderboards table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#players-leaderboards table tr:nth-child(2) {
+    border-bottom: 3px solid #b5ad06;
+}
+
+#players-leaderboards table tr:nth-child(3) {
+    border-bottom: 3px solid #8a8a8a;
+}
+
+#players-leaderboards table tr:nth-child(4) {
+    border-bottom: 3px solid #cd7f32;
+}
+#teams-leaderboards table tr:nth-child(2) {
+    border-bottom: 3px solid #b5ad06;
+    background-color: rgba(30, 117, 0, 0.6);
+}
+
+#teams-leaderboards table tr:nth-child(3) {
+    border-bottom: 3px solid #8a8a8a;
+}
+
+#teams-leaderboards table tr:nth-child(4) {
+    border-bottom: 3px solid #cd7f32;
 }
 
 /*
@@ -621,8 +659,11 @@ th {
 }
 
 
-#leaderboards table tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1);
+
+#leaderboards table tr .my-player{
+    color: #ffffff;
+    font-weight: bold;
+    
 }
 
 #leaderboards .card-content {
@@ -1112,7 +1153,7 @@ form.chat .fromThem {
     justify-content: space-around;
     height: 50px;
     padding: 10px;
-    background-color: rgba(128, 0, 0, 0.8);
+    background-color: rgba(128, 0, 0, 0.5);
     border-bottom: 5px solid rgba(0, 0, 0, 0.7);
 }
 
@@ -1135,7 +1176,7 @@ form.chat .fromThem {
 }
 
 .chat-list-item:first-of-type {
-
+    background-color: rgba(128, 0, 0, 0.8);
     border-bottom-width: 10px;
 }
 
@@ -1149,7 +1190,11 @@ form.chat .fromThem {
 
 
 
-
+.my-player {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: rgba(30, 117, 0, 0.6);
+}
 .hide {
     display: none;
 }
